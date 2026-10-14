@@ -1,33 +1,33 @@
-![Mohammed Afnan Waseem - Software Engineer, AI Engineering, Cloud & Data Platforms](./banner.png)
+![Mohammed Afnan Waseem - AI & Software Engineer](./banner.png)
 
-### Software Engineer | AI Engineering, Cloud & Data Platforms | Co-Founder, Axethos | M.S. Applied Data Science, University of Chicago
+### AI & Software Engineer | Cloud & Data Platforms | Co-Founder, Axethos | M.S. Applied Data Science, University of Chicago
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammed--afnan--waseem-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-afnan-waseem/)
 ![UChicago](https://img.shields.io/badge/M.S.%20Applied%20Data%20Science-University%20of%20Chicago-800000?style=for-the-badge)
 ![Location](https://img.shields.io/badge/Chicago%2C%20IL-424242?style=for-the-badge&logo=googlemaps&logoColor=white)
-![Open to conversations](https://img.shields.io/badge/Open%20to%20conversations-2EA043?style=for-the-badge)
+![Open to roles](https://img.shields.io/badge/Open%20to%20roles-2EA043?style=for-the-badge)
 
-Four years building the production systems a national certification board runs on, and the engineer who still writes the code, reviews the PRs, and owns the Azure tenant.
+Four years building the production systems a national certification board runs on, and still the engineer who writes the code, reviews the pull requests, and owns the Azure tenant.
 
-At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I went from junior developer on an Oracle APEX CRM to architecting the organization's move off on-premises servers: a FastAPI and Next.js platform on Azure, a 400 GB Microsoft Fabric lakehouse, exam cheat-detection models in production on Databricks, and an internal platform used by every staff member. On the side I co-founded **Axethos**, an AI governance platform, and before that **NeoAthena**, a GenAI content platform. I'm finishing an **M.S. in Applied Data Science at the University of Chicago** (4.0 GPA), focused on LLM applications, MLOps, and scalable data systems.
+At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I went from junior developer on an Oracle APEX CRM to architecting the organization's move off on-premises servers: a FastAPI and Next.js platform on Azure, a 400 GB Microsoft Fabric lakehouse, exam cheat-detection models in production on Databricks, and an internal platform used by every staff member. Alongside that I co-founded **Axethos**, an AI governance platform, and before it **NeoAthena**, a GenAI content platform. I'm completing an **M.S. in Applied Data Science at the University of Chicago** (4.0 GPA), focused on LLM applications, MLOps, and scalable data systems.
 
 ---
 
 ## Impact
 
-**Azure platform architected from scratch**: migrated on-prem Flask services on IIS to FastAPI apps on Azure Web Apps (webhooks, public API, internal API, Next.js frontend) handling up to **23K webhook events and 1K API calls per day** for 3 vendor partners, with custom JWT auth, rate limiting, and IAM.
+**Azure platform architected from scratch**: migrated on-premises Flask services to FastAPI apps on Azure Web Apps (webhooks, public API, internal API, Next.js frontend) handling up to **23K webhook events and 1K API calls per day** for 3 vendor partners, with custom JWT auth, rate limiting, and IAM.
 
-**2,000+ tables, ~400 GB, one lakehouse**: architected a Microsoft Fabric medallion platform migrating data from Aptify and two exam databases through Data Pipelines, PySpark notebooks, Lakehouses, Warehouses, and Eventhouses for near-real-time Power BI reporting.
+**2,000+ tables, ~400 GB, one lakehouse**: architected a Microsoft Fabric medallion platform migrating Aptify and two exam databases through Data Pipelines, PySpark notebooks, Lakehouses, Warehouses, and Eventhouses for near-real-time Power BI reporting.
 
-**Exam cheat detection, weeks to hours**: productionized collusion-detection models on Azure Databricks that screen **5K-20K exams per quarter**, flag the cases that lead to invalidated exams, and match an independent psychometric vendor's results **100%**.
+**Exam cheat detection, weeks to hours**: productionized collusion-detection models on Azure Databricks that screen **5K-20K exams per quarter** and match an independent psychometric vendor's results **100%**, after tracing and fixing scoring-logic discrepancies in the original pipeline.
 
 **One platform for every staff member**: built an all-in-one Next.js/TypeScript platform used by all ~40 staff that unifies ACGI, Aptify, and exam data through a FastAPI service reading Delta tables directly from OneLake, replacing manual database pulls.
 
 **Release cycles from weeks to hours**: introduced Git version control, Fabric Git integration, and Claude Code across the organization (MCP servers, PR-review hooks, CLAUDE.md standards). Primary code reviewer for production deployments and mentor to other developers.
 
-**Examinee outreach on autopilot**: weekly Twilio SMS and voice campaigns reaching 1K-4K examinees each, a two-way SMS-to-Zendesk channel with opt-out handling, and 2K-6K support tickets per month created and synced automatically.
+**Member outreach on autopilot**: weekly Twilio SMS and voice campaigns reaching 1K-4K examinees each, a two-way SMS-to-Zendesk channel with opt-out handling, and 2K-6K support tickets per month created and synced automatically.
 
-**150 Azure resources, ~$1.5K/month saved**: administer a hub-and-spoke landing zone (VNets, Key Vault, RBAC/IAM, health alerting) and cut recurring cloud spend.
+**150 Azure resources, ~$1.5K/month saved**: administer a hub-and-spoke landing zone (VNets, Key Vault, RBAC/IAM, resource-health alerting) and cut recurring cloud spend.
 
 ---
 
@@ -36,10 +36,10 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 | As an engineer | As a founder and student |
 | --- | --- |
 | Architect and ship backend, full-stack, and data systems end to end, from API design to deployment | Co-founded Axethos: lead product, customer demos, and the core intent-detection system |
-| Turn vague operational asks from credentialing, exam security, and member services into production tools | Co-founded NeoAthena: owned architecture and product, reached 1,000+ users |
+| Turn open-ended asks from credentialing, exam security, and member services into production tools | Co-founded NeoAthena: owned architecture and product, reached 1,000+ users |
 | Integrate vendors through webhooks, public APIs, OAuth 2.0, and event-driven ingestion | M.S. Applied Data Science at UChicago (4.0 GPA): RAG, MLOps, Spark, and scalable AI pipelines |
 | Own the cloud: Azure administration, networking, cost, and monitoring | Capstone: LLM clinical intelligence for school-based speech screening, sponsored by Logopedyx |
-| Primary production code reviewer; set Git, CI/CD, and AI-assisted development standards | Member of ASAE's Technology Professionals Advisory Council, focused on AI for productivity |
+| Set Git, CI/CD, code review, and AI-assisted development standards for the team | Member of ASAE's Technology Professionals Advisory Council, focused on AI for productivity |
 
 ---
 
@@ -50,6 +50,7 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 ![AI Governance](https://img.shields.io/badge/AI%20Governance-1B3A5C?style=for-the-badge)
 ![GenAI Applications](https://img.shields.io/badge/GenAI%20Applications-1B3A5C?style=for-the-badge)
 ![Data Platforms](https://img.shields.io/badge/Data%20Platforms-1B3A5C?style=for-the-badge)
+![MLOps](https://img.shields.io/badge/MLOps-1B3A5C?style=for-the-badge)
 ![Vendor Integrations](https://img.shields.io/badge/Vendor%20Integrations-1B3A5C?style=for-the-badge)
 
 ---
@@ -86,6 +87,7 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
+![Prefect](https://img.shields.io/badge/Prefect-070E10?style=for-the-badge&logo=prefect&logoColor=white)
 ![DVC](https://img.shields.io/badge/DVC-13ADC7?style=for-the-badge&logo=dvc&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
@@ -93,6 +95,8 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white)
 ![Zendesk](https://img.shields.io/badge/Zendesk-03363D?style=for-the-badge&logo=zendesk&logoColor=white)
@@ -100,44 +104,74 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 
 ---
 
+## Experience
+
+**Software Developer | NBCRNA** (Jan 2024 - present)
+Technical owner for operations, exam security, and member services. Architected the Azure platform, the Fabric lakehouse, and the staff-wide internal platform; productionized cheat detection on Databricks; administer the Azure environment and lead code review for production releases.
+
+**Junior Software Developer | NBCRNA** (Oct 2022 - Dec 2023)
+Built front-end features for ACGI, the organization's Oracle APEX CRM (interactive grids, reports, modal workflows), Python and PL/SQL ETL pipelines into ACGI and reporting tables, and a Python PDF service generating 2,000+ certification applications per month.
+
+**Undergraduate Researcher | Discovery Partners Institute** (Jan - May 2022)
+Part of a cross-institution team (UIC, UIUC, IIT, UChicago) analyzing the spread of media misinformation with Python, SQL, and machine learning; presented findings to stakeholders and built a web app to share verified information with the public.
+
+**Teaching Assistant and Grader | University of Illinois Chicago** (2020 - 2021)
+Undergraduate TA for computer systems coursework (assembly language, Linux, C++): ran lab sessions and office hours and graded assignments. Also served as a learning assistant and grader for mathematics courses.
+
+---
+
 ## Startups
 
-**Axethos | AI governance platform, Co-Founder (2026 - present)**: a platform that sits between employees and AI tools like ChatGPT, Claude, Gemini, and Copilot, enforcing each organization's own AI policy, preventing sensitive data leaks, and giving leadership visibility into AI usage. Rolls out as a browser extension and desktop app with no network changes. I lead product and wrote the proprietary intent-detection system (sub-20 ms decisions, self-retraining). Running pilots with early-access partners.
+**Axethos | AI governance platform, Co-Founder (2026 - present)**
+A platform that sits between employees and AI tools like ChatGPT, Claude, Gemini, and Copilot: it enforces each organization's own AI policy, prevents sensitive data from leaking, and gives leadership visibility into AI usage. Rolls out as a browser extension and desktop app with no network changes. I lead product and built the proprietary intent-detection system (sub-20 ms decisions, self-retraining). Running pilots with early-access partners.
 
-**NeoAthena | GenAI content platform, Co-Founder & Lead Engineer (2023 - 2025)**: a B2B/B2C platform where users upload audio and video, get transcripts, chat with their content via RAG, and turn it into articles, blogs, and social posts. Built on Next.js, FastAPI, Supabase, LangChain, and AWS. Reached 1,000+ users through a Raen AI partnership and a 300+ user university pilot.
+**NeoAthena | GenAI content platform, Co-Founder & Lead Engineer (2023 - 2025)**
+A dual-platform GenAI product. The B2C side lets users upload audio and video, get transcripts, chat with their content via RAG, and turn it into articles, blogs, and social posts; the B2B side is an AI-powered event-management system with content tracking, participant registration, and real-time AI chat. Built on Next.js, FastAPI, Supabase, LangChain, and containerized services on AWS (EC2, Lambda, SES, CloudWatch, Route 53). Led a small cross-functional team and reached 1,000+ users through a Raen AI partnership and a 300+ user university pilot.
 
 ---
 
 ## Selected projects
 
-**[Multimodal Product Assistant](https://github.com/mwaseemUC/FinalStreamlitApp)**: a text-and-image RAG chatbot over 10,001 Amazon products. Answers product questions, returns photos, and identifies a product from an uploaded image, with a confidence gate that declines when unsure. CLIP retrieval with MultiQuery expansion, Groq-served GPT-OSS models, Streamlit. 0.965 RAGAS faithfulness; image Recall@5 of 0.751.
+| Project | What it is | Built with |
+| --- | --- | --- |
+| **[Multimodal Product Assistant](https://github.com/mwaseemUC/FinalStreamlitApp)** | Text-and-image RAG chatbot over 10,001 Amazon products: answers questions, returns photos, and identifies products from an uploaded picture, with a calibrated confidence gate that declines rather than guesses. 0.965 RAGAS faithfulness, image Recall@5 of 0.751, 0.04 s per image query with no vector database. | CLIP ViT-B/32 + ViT-L/14, MultiQuery, Groq GPT-OSS, Streamlit, Docker |
+| **[Diabetes Readmission MLOps Pipeline](https://github.com/enels-uchi/ml-ops-final-group-3)** | End-to-end MLOps on ~70,000 hospital encounters: 7-stage Prefect pipeline, Feast and DVC, AutoML across 16 algorithms with an MLflow champion registry, a Dockerized FastAPI service with in-container Evidently drift detection (~10 ms p95), and Prometheus/Grafana alerting that caught all 4 simulated drift scenarios. Team of 4. | Prefect, Feast, DVC, PyCaret, CatBoost, MLflow, FastAPI, Docker, Evidently, Prometheus, Grafana |
+| **[MS-ADS Assistant](https://github.com/mwaseemUC/genAI-midterm)** | RAG chatbot that answers questions about UChicago's MS in Applied Data Science program with cited sources, comparing RAG-Fusion, HyDE, and Multi-Query retrieval under matched conditions. | LangChain, ChromaDB, OpenAI, Streamlit, pytest |
+| **[AutoML: PyCaret vs H2O](https://github.com/mwaseemUC/mlops-assignment-3)** | Two AutoML platforms benchmarked on an identical split: cut hold-out RMSE 19.1% versus the linear baseline, with a Champion/Challenger MLflow registry, a portable H2O MOJO export, and a documented reproducibility analysis. | PyCaret, H2O AutoML, MLflow, CatBoost |
+| **[Athletes Feature Store Pipeline](https://github.com/mwaseemUC/athletes-mlops-feature-store)** | Reproducible ML pipeline on 423K CrossFit records with versioned feature sets in Feast and tracked experiments; engineered features lifted ROC-AUC from 0.878 to 0.919. | Feast, MLflow on Databricks, scikit-learn |
+| **Clinical Intelligence Layer** | UChicago capstone sponsored by Logopedyx: an LLM layer for school-based speech screening that automates clinical documentation, stratifies student risk, and delivers population analytics. In progress. | LLMs, Python |
+| **NYC Taxi Analytics on GCP** | BigQuery analytics pipeline over NYC taxi data plus a Streamlit and Gemini app deployed to Cloud Run. | BigQuery, Gemini, Cloud Run, Streamlit |
+| **Big Data coursework** | Near-duplicate detection with MinHash LSH in Snowflake, a PySpark air-travel analysis on Databricks, and containerized workloads on GCP. | Snowflake, Databricks, PySpark, Docker |
 
-**[MS-ADS Assistant](https://github.com/mwaseemUC/genAI-midterm)**: a RAG chatbot that answers questions about UChicago's MS in Applied Data Science program with cited sources. Compares RAG-Fusion, HyDE, and Multi-Query retrieval under matched conditions over 473 chunks from 29 program pages. LangChain, ChromaDB, OpenAI, Streamlit.
+### Earlier work
 
-**[Athletes MLOps Feature Store](https://github.com/mwaseemUC/athletes-mlops-feature-store)**: an end-to-end, reproducible ML pipeline on 423K CrossFit athlete records with a Feast feature store and MLflow on Databricks. Versioned feature sets lifted ROC-AUC from 0.878 to 0.919.
+**NuNote**: a mobile note app that clusters notes by topic and auto-generates tags, with semantic retrieval over a RAG pipeline (FastAPI, Java, Android Studio, Firebase, PostgreSQL).
 
-**[Reproducible ML Pipeline with DVC](https://github.com/mwaseemUC/mlops-assignment-3)**: DVC-managed data versioning and pipeline stages for a reproducible ML workflow.
+**Stack Overflow trend analysis**: mined 2008-2022 Stack Overflow activity to identify shifts in user engagement and proposed platform optimizations from the findings.
 
-**Hospital Readmission MLOps Pipeline**: an end-to-end pipeline on ~70,000 patient encounters with Prefect orchestration, DVC and Feast, PyCaret AutoML across 16 algorithms with an MLflow registry, Dockerized FastAPI serving, and Evidently drift monitoring with Prometheus and Grafana alerts.
+**Spam email classifier**: preprocessed the Spambase dataset and compared multiple classification algorithms to build an accurate spam filter in Python.
 
-**Clinical Intelligence Layer (UChicago Capstone, sponsored by Logopedyx)**: an LLM-powered layer for school-based speech screening that automates clinical documentation, stratifies student risk, and delivers population-level analytics.
-
-**NYC Taxi Analytics on GCP**: a BigQuery analytics pipeline plus a Streamlit and Gemini app deployed to Cloud Run.
+**Stock & crypto advisor app** (team project): Android app giving personalized stock and crypto recommendations from user preferences and live market data (Java, Firebase, Yahoo Finance API).
 
 ---
 
 ## Education
 
-**M.S., Applied Data Science, University of Chicago** (4.0 GPA, expected March 2027) · **B.S., Computer Science, University of Illinois Chicago** (2022)
+**M.S., Applied Data Science, University of Chicago** (4.0 GPA, expected March 2027)
+Generative AI · MLOps · Scalable Data Systems & AI Pipelines · Big Data & Cloud Computing
 
-Coursework: Generative AI, MLOps, Scalable Data Systems & AI Pipelines, Big Data & Cloud Computing
+**B.S., Computer Science, University of Illinois Chicago** (2022)
 
 ---
 
-## Track record
+## Community & speaking
 
-**NBCRNA (2022 - present)**: Software Developer, previously Junior Software Developer · **Axethos** · **NeoAthena** · Discovery Partners Institute (undergraduate research on media misinformation) · University of Illinois Chicago (teaching assistant)
+**ASAE Technology Professionals Advisory Council** (2025 - present), previously **ASAE NextGen Council** (2024 - 2025), focused on how associations adopt AI and modern technology.
 
-ASAE Technology Professionals Advisory Council member. Selected speaking: ASAE Association Tech Insider podcast on Retrieval-Augmented Generation · DelCor panel on the future of tech skills and professional development. Winner, Singularity University Global Innovation Challenge (2016).
+Selected speaking: *Association Tech Insider* podcast, "Introduction to RAG" (2025) · DelCor panel on the future of technology skills and professional development (2024).
 
-Production software for a regulated national certification board by day, AI products by night, and always the one who ships it.
+Winner, **Singularity University Global Innovation Challenge** (2016).
+
+---
+
+Production software for a national certification board by day, AI products by night, and always the one who ships it.
