@@ -1,19 +1,32 @@
 ![Mohammed Afnan Waseem - AI & Software Engineer](./banner.png)
 
-### AI & Software Engineer | Cloud & Data Platforms | Co-Founder, Axethos | M.S. Applied Data Science, University of Chicago
+### AI Engineer | LLM Agents, MCP & Evals | Backend, Cloud & Data Platforms | Co-Founder, Axethos | M.S. Applied Data Science, University of Chicago
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammed--afnan--waseem-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-afnan-waseem/)
 ![UChicago](https://img.shields.io/badge/M.S.%20Applied%20Data%20Science-University%20of%20Chicago-800000?style=for-the-badge)
 ![Location](https://img.shields.io/badge/Chicago%2C%20IL-424242?style=for-the-badge&logo=googlemaps&logoColor=white)
 ![Open to roles](https://img.shields.io/badge/Open%20to%20roles-2EA043?style=for-the-badge)
 
-Four years building the production systems a national certification board runs on, and still the engineer who writes the code, reviews the pull requests, and owns the Azure tenant.
+I build LLM agents and tools the way I build production software: typed interfaces, safety layers, tests, and an eval with a baseline to beat before anything ships.
 
-At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I went from junior developer on an Oracle APEX CRM to architecting the organization's move off on-premises servers: a FastAPI and Next.js platform on Azure, a 400 GB Microsoft Fabric lakehouse, exam cheat-detection models in production on Databricks, and an internal platform used by every staff member. Alongside that I co-founded **Axethos**, an AI governance platform, and before it **NeoAthena**, a GenAI content platform. I'm completing an **M.S. in Applied Data Science at the University of Chicago** (4.0 GPA), focused on LLM applications, MLOps, and scalable data systems.
+By day I'm the software engineer at **NBCRNA**, the national certification board for 60,000 nurse anesthetists, where I went from junior developer on an Oracle APEX CRM to architecting the organization's move off on-premises servers: a FastAPI and Next.js platform on Azure, a 400 GB Microsoft Fabric lakehouse, exam cheat-detection models in production on Databricks, and an internal platform used by every staff member. I also introduced Claude Code to the organization and built its MCP servers and PR-review hooks. On my own time I build open-source AI engineering projects (agents, MCP servers, eval-gated CI), co-founded **Axethos**, an AI governance platform, and before it **NeoAthena**, a GenAI content platform. I'm completing an **M.S. in Applied Data Science at the University of Chicago** (4.0 GPA), focused on LLM applications, MLOps, and scalable data systems.
 
 ---
 
-## Impact
+## AI engineering projects
+
+Each repo reports real numbers from its own eval runs against a baseline, with tests, CI, a cost note, and a "what didn't work" section.
+
+| Project | What it is | Headline result | Built with |
+| --- | --- | --- | --- |
+| **[text2sql-agent](https://github.com/mwaseemUC/text2sql-agent)** | Self-correcting text-to-SQL agent: looks up the schema with tools, checks real values with exploratory queries, retries on errors and suspicious results, and self-checks its answer. Runs on a read-only connection with 4 independent write-blocking layers tested against 16 write variants. | On questions where user wording doesn't match stored values, the Haiku agent scores **95% vs 75%** for single-shot Sonnet at about a third of the cost; 100% on the 50-question main set. 364 tests. | LangGraph, Anthropic SDK (prompt caching, strict tools), SQLite, pytest |
+| **[sec-edgar-mcp](https://github.com/mwaseemUC/sec-edgar-mcp)** | MCP server giving Claude typed tools over SEC EDGAR: company lookup, filings, annual XBRL financial facts, and 10-K/10-Q sections. Every result carries a source URL; SEC fair-access rules (User-Agent, rate limiter, retries, disk cache) enforced by construction. | **10/10 grounded correct** on a golden set (value right, present in the tool output, cited to the filing) for $0.17 total. Works in Claude Desktop and Claude Code. 277 tests. | MCP Python SDK, httpx, Pydantic, pytest, respx |
+| **[pr-review-agent](https://github.com/mwaseemUC/pr-review-agent)** | GitHub Action that reviews each PR with Claude and posts inline comments with severity, bug category, and one-click suggested fixes. Strict tool schema validated by Pydantic, line mapping to commentable lines, dedupe markers, and prompt-injection defenses. | **100% catch rate** on 20 planted-bug PRs across 3 repeats; full-file context lifts precision from 78.9% to 89.2% for +$0.0015 per PR ($0.0086 total). 170 tests. | GitHub Actions, GitHub REST API, Anthropic SDK, Pydantic, pytest |
+| **[llm-eval-gate](https://github.com/mwaseemUC/llm-eval-gate)** | LLM support-ticket classifier, a hand-reviewed 50-ticket golden set, and a GitHub Actions gate that fails a PR when accuracy drops more than 3 points against the base branch's baseline. | Blocked a "cost-saving" PR that cut prompt tokens 51% but dropped accuracy **100% to 90%**, and showed the PR saved nothing because of prompt caching. 144 tests. | Anthropic SDK, GitHub Actions, Pydantic, pytest |
+
+---
+
+## Impact at work
 
 **Azure platform architected from scratch**: migrated on-premises Flask services to FastAPI apps on Azure Web Apps (webhooks, public API, internal API, Next.js frontend) handling up to **23K webhook events and 1K API calls per day** for 3 vendor partners, with custom JWT auth, rate limiting, and IAM.
 
@@ -23,7 +36,7 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 
 **One platform for every staff member**: built an all-in-one Next.js/TypeScript platform used by all ~40 staff that unifies ACGI, Aptify, and exam data through a FastAPI service reading Delta tables directly from OneLake, replacing manual database pulls.
 
-**Release cycles from weeks to hours**: introduced Git version control, Fabric Git integration, and Claude Code across the organization (MCP servers, PR-review hooks, CLAUDE.md standards). Primary code reviewer for production deployments and mentor to other developers.
+**AI-assisted development, weeks to hours**: introduced Git version control, Fabric Git integration, and Claude Code across the organization (MCP servers, PR-review hooks, CLAUDE.md standards), cutting release cycles from weeks to hours. Primary code reviewer for production deployments and mentor to other developers.
 
 **Member outreach on autopilot**: weekly Twilio SMS and voice campaigns reaching 1K-4K examinees each, a two-way SMS-to-Zendesk channel with opt-out handling, and 2K-6K support tickets per month created and synced automatically.
 
@@ -33,22 +46,23 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 
 ## How I work
 
-| As an engineer | As a founder and student |
+| As an engineer | As a builder, founder, and student |
 | --- | --- |
-| Architect and ship backend, full-stack, and data systems end to end, from API design to deployment | Co-founded Axethos: lead product, customer demos, and the core intent-detection system |
-| Turn open-ended asks from credentialing, exam security, and member services into production tools | Co-founded NeoAthena: owned architecture and product, reached 1,000+ users |
-| Integrate vendors through webhooks, public APIs, OAuth 2.0, and event-driven ingestion | M.S. Applied Data Science at UChicago (4.0 GPA): RAG, MLOps, Spark, and scalable AI pipelines |
-| Own the cloud: Azure administration, networking, cost, and monitoring | Capstone: LLM clinical intelligence for school-based speech screening, sponsored by Logopedyx |
-| Set Git, CI/CD, code review, and AI-assisted development standards for the team | Member of ASAE's Technology Professionals Advisory Council, focused on AI for productivity |
+| Architect and ship backend, full-stack, and data systems end to end, from API design to deployment | Build LLM agents and MCP tools with evals first: golden sets, baselines, CI regression gates, and cost and latency per call |
+| Turn open-ended asks from operations, exam security, and member services into production tools | Treat model output as untrusted: read-only data access, strict tool schemas, Pydantic validation, prompt-injection defenses |
+| Integrate vendors through webhooks, public APIs, OAuth 2.0, and event-driven ingestion | Co-founded Axethos: lead product, customer demos, and the core intent-detection system |
+| Own the cloud: Azure administration, networking, cost, and monitoring | Co-founded NeoAthena: owned architecture and product, reached 1,000+ users |
+| Set Git, CI/CD, code review, and AI-assisted development standards for the team | M.S. Applied Data Science at UChicago (4.0 GPA): RAG, MLOps, Spark, and scalable AI pipelines |
 
 ---
 
 ## Domains
 
-![Healthcare Credentialing](https://img.shields.io/badge/Healthcare%20Credentialing-1B3A5C?style=for-the-badge)
-![Exam Security](https://img.shields.io/badge/Exam%20Security%20%2F%20Psychometrics-1B3A5C?style=for-the-badge)
+![LLM Agents](https://img.shields.io/badge/LLM%20Agents%20%26%20Tool%20Use-1B3A5C?style=for-the-badge)
+![MCP](https://img.shields.io/badge/MCP%20Servers-1B3A5C?style=for-the-badge)
+![Evals](https://img.shields.io/badge/Evals%20%26%20CI%20Gates-1B3A5C?style=for-the-badge)
+![GenAI Applications](https://img.shields.io/badge/GenAI%20%26%20RAG-1B3A5C?style=for-the-badge)
 ![AI Governance](https://img.shields.io/badge/AI%20Governance-1B3A5C?style=for-the-badge)
-![GenAI Applications](https://img.shields.io/badge/GenAI%20Applications-1B3A5C?style=for-the-badge)
 ![Data Platforms](https://img.shields.io/badge/Data%20Platforms-1B3A5C?style=for-the-badge)
 ![MLOps](https://img.shields.io/badge/MLOps-1B3A5C?style=for-the-badge)
 ![Vendor Integrations](https://img.shields.io/badge/Vendor%20Integrations-1B3A5C?style=for-the-badge)
@@ -56,6 +70,26 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 ---
 
 ## Stack
+
+**LLMs & Agents**
+
+![Anthropic](https://img.shields.io/badge/Anthropic%20API%20%2F%20Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langgraph&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP%20Python%20SDK-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6446?style=for-the-badge)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+
+**Evals, Testing & CI**
+
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![RAGAS](https://img.shields.io/badge/RAGAS-424242?style=for-the-badge)
+![Golden Sets](https://img.shields.io/badge/Golden%20Sets%20%26%20Regression%20Gates-424242?style=for-the-badge)
+![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=for-the-badge&logo=ruff&logoColor=black)
 
 **Languages & Frameworks**
 
@@ -77,26 +111,22 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
-**AI & MLOps**
+**ML & MLOps**
 
-![Claude](https://img.shields.io/badge/Claude%20Code%20%2B%20MCP-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
 ![Prefect](https://img.shields.io/badge/Prefect-070E10?style=for-the-badge&logo=prefect&logoColor=white)
 ![DVC](https://img.shields.io/badge/DVC-13ADC7?style=for-the-badge&logo=dvc&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
 **Build, Ship & Integrate**
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white)
 ![Zendesk](https://img.shields.io/badge/Zendesk-03363D?style=for-the-badge&logo=zendesk&logoColor=white)
@@ -107,7 +137,7 @@ At **NBCRNA**, the national certification board for 60,000 nurse anesthetists, I
 ## Experience
 
 **Software Developer | NBCRNA** (Jan 2024 - present)
-Technical owner for operations, exam security, and member services. Architected the Azure platform, the Fabric lakehouse, and the staff-wide internal platform; productionized cheat detection on Databricks; administer the Azure environment and lead code review for production releases.
+Technical owner for operations, exam security, and member services. Architected the Azure platform, the Fabric lakehouse, and the staff-wide internal platform; productionized cheat detection on Databricks; brought Claude Code and MCP into the team's workflow; administer the Azure environment and lead code review for production releases.
 
 **Junior Software Developer | NBCRNA** (Oct 2022 - Dec 2023)
 Built front-end features for ACGI, the organization's Oracle APEX CRM (interactive grids, reports, modal workflows), Python and PL/SQL ETL pipelines into ACGI and reporting tables, and a Python PDF service generating 2,000+ certification applications per month.
@@ -130,7 +160,7 @@ A dual-platform GenAI product. The B2C side lets users upload audio and video, g
 
 ---
 
-## Selected projects
+## Coursework and team projects
 
 | Project | What it is | Built with |
 | --- | --- | --- |
@@ -174,4 +204,4 @@ Winner, **Singularity University Global Innovation Challenge** (2016).
 
 ---
 
-Production software for a national certification board by day, AI products by night, and always the one who ships it.
+Production software by day, measured AI agents by night, and always the one who ships it.
