@@ -1,6 +1,6 @@
 ![Mohammed Afnan Waseem - AI & Software Engineer](./banner.png)
 
-### AI Engineer | LLM Agents, MCP & Evals | Backend, Cloud & Data Platforms | Co-Founder, Axethos | M.S. Applied Data Science, University of Chicago
+### Software & AI Engineer | LLM Agents, MCP & Evals | Backend, Cloud & Data Platforms | Co-Founder, Axethos | M.S. Applied Data Science, University of Chicago
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammed--afnan--waseem-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-afnan-waseem/)
 ![UChicago](https://img.shields.io/badge/M.S.%20Applied%20Data%20Science-University%20of%20Chicago-800000?style=for-the-badge)
